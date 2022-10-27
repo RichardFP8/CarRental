@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+
+</head>
+
+<body>
+    <main>
+        <form style="margin: 0 auto; border: 1px solid rgb(0, 0, 230);width: 25em;">
+            <h1 style="padding: 0.5rem;">ACME Car Rental</h1>
+
+            <div style="row-gap: 2rem;">
+                <label for="pickup" style="padding-left:0.5rem;">Pickup date: </label>
+                <input id="pickup" type="date" />
+                <br />
+                <label for="rentingDays" style="padding-left:0.5rem">Number of days: </label>
+                <input id="rentingDays" type="number" />
+
+            </div>
+            <h4 style="padding-left: 1rem; font-weight: normal;">Options</h4>
+
+            <div style="display: flex; flex-direction: column; padding-left: 0.5rem; row-gap: 0.5rem;">
+                <label for="electronic"><input id="electronic" type="checkbox" />Electronic Toll Tag ($3.95/day)
+                </label>
+                <label for="gps"><input id="gps" type="checkbox" />GPS ($2.95/day)</label>
+                <label for="roadside"><input id="roadside" type="checkbox" />Roadside Assistance
+                    ($2.95/day)</label>
+            </div>
+
+            <div style="padding-left: 1rem;">
+                <h4 style=" font-weight: normal; margin-bottom: -1px;">Under 25</h4>
+                <label for="no"><input id="no" type="radio" name="under25" />No</label>
+                <label for="yes"><input id="yes" type="radio" name="under25" />Yes</label>
+            </div>
+
+            <input id="estimate" type="button" value="Estimate Total Cost" style="margin-left: 1rem;margin-top: 1rem" />
+
+            <p style="padding-left: 1rem">Car rental: <span id="carRentalCost"></span>
+                <br />Options: <span id="optionsTax"></span>
+                <br />Under 25 surcharge: <span id="25surcharge"></span>
+            </p>
+            <p style="margin-left: 1rem;">Total due: <span id="totalDue"></span> </p>
+        </form>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
